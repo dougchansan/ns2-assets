@@ -6,7 +6,9 @@ dump -> triage -> decode -> glTF -> look at it. This page records where the
 pipeline stands and what the formats actually are in dumped data.
 
 MKW itself could not be dumped in this session (the console is asleep and cannot
-be woken - see `docs/RESULTS.md`, 2026-10-28). The triage below therefore runs on
+be woken - see
+[ns2-console/docs/RESULTS.md](https://github.com/dougchansan/ns2-console/blob/main/docs/RESULTS.md),
+2026-10-28). The triage below therefore runs on
 the Mario Kart 8 Deluxe dump already on this machine
 (`~/MK8DX-full`, 18 GiB, base + update 1507328). It is the same container family
 and it exercises exactly the parser the MKW work needs; the formats still have to
@@ -74,5 +76,5 @@ with skeleton and weights intact.
 2. Decode geometry + indices from one model, export glTF, confirm it opens.
 3. Add skeleton + skin weights, confirm the rig is posed correctly.
 4. Add materials and textures (BC1/BC3/BC4/BC5 first, BC7 next).
-5. Only then look at redirects - and read `docs/MODLOADER.md` first, because
+5. Only then look at redirects - and read [ns2-console/docs/MODLOADER.md](https://github.com/dougchansan/ns2-console/blob/main/docs/MODLOADER.md) first, because
    that side is blocked at the signature/mod-loader layer, not at the decoder.
